@@ -1,0 +1,8 @@
+.gitignore
+include_rules
+
+: |> ./get-deps |> cc-runtime.c limine.h
+
+: foreach *.c | limine.h |> !cc |> %B.o
+: foreach *.S |> !asm |> %B.S.o
+: *.o |> !ld |> ros.elf

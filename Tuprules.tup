@@ -1,0 +1,19 @@
+CC_FLAGS = -g -ffreestanding -ffunction-sections -fdata-sections
+CC_FLAGS += -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2
+CC_FLAGS += -mcmodel=kernel
+CC_FLAGS += -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC
+CC_FLAGS += -Wall -Wextra
+CC_FLAGS += -std=gnu11
+CC_FLAGS += -m64 -march=x86-64
+
+CPP_FLAGS = -I src -isystem freestnd-c-hdrs-0bsd
+
+ASM_FLAGS = -Wall
+
+LD_FLAGS = -nostdlib -static -T linker.ld
+# --no-dynamic-linker 
+LD_FLAGS += -z max-page-size=0x1000 -gc-sections
+
+!cc = |>^j CC %f^ x86_64-elf-gcc $(CC_FLAGS) $(CPP_FLAGS) -c %f -o %o |>
+!asm = |> ^j ASM %f^ x86_64-elf-as $(ASM_FLAGS) -c %f -o %o |>
+!ld = |>^j LD %f^ x86_64-elf-ld $(LD_FLAGS) %f -o %o |>

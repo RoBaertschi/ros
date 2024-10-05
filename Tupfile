@@ -1,0 +1,12 @@
+: |> curl -Lo %o https://github.com/osdev0/edk2-ovmf-nightly/releases/latest/download/ovmf-code-x86_64.fd |> ovmf-code-x86_64.fd
+: |> curl -Lo %o https://github.com/osdev0/edk2-ovmf-nightly/releases/latest/download/ovmf-vars-x86_64.fd |> ovmf-vars-x86_64.fd
+
+: |> git clone https://github.com/limine-bootloader/limine --branch=v8.x-binary --depth=1 && rm -rf limine/.git limine/.gitignore |> limine/BOOTAA64.EFI  limine/BOOTLOONGARCH64.EFI limine/BOOTX64.EFI limine/Makefile limine/limine-bios-cd.bin limine/limine-bios-pxe.bin limine/limine-uefi-cd.bin limine/limine.exe limine/BOOTIA32.EFI limine/BOOTRISCV64.EFI limine/LICENSE limine/install-sh limine/limine-bios-hdd.h limine/limine-bios.sys limine/limine.c limine/limine.h
+
+: limine/limine.c limine/*.h |> gcc -Wall -Wextra -std=c99 limine/limine.c -o %o |> limine/limine
+
+# build binary
+: limine/limine limine.conf limine/limine-bios.sys limine/limine-bios-cd.bin limine/limine-uefi-cd.bin limine/BOOTX64.EFI limine/BOOTIA32.EFI src/ros.elf |>./make_iso.bash ros |> ros.iso
+: limine/limine limine.conf limine/limine-bios.sys limine/limine-bios-cd.bin limine/limine-uefi-cd.bin limine/BOOTX64.EFI limine/BOOTIA32.EFI src/ros.elf |>./make_disk.bash ros |> ros.hdd
+
+.gitignore

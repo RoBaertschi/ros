@@ -1,0 +1,7 @@
+#ifndef ROS_PAGING_H_
+#define ROS_PAGING_H_
+
+#define PAGING_VIRTUAL_OFFSET 0xffff800000000000
+#define PAGING_KERNEL_OFFSET 0xffffffff80000000
+
+#endif // ROS_PAGING_H_

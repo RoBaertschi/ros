@@ -1,0 +1,87 @@
+[
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c cc-runtime.c -o cc-runtime.o",
+    "file": "cc-runtime.c"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c cc-runtime.c -o cc-runtime.o",
+    "file": "limine.h"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "cc-runtime.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "main.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "serial.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "gdt.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "gdt.S.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-ld -nostdlib -static -T linker.ld -z max-page-size=0x1000 -gc-sections cc-runtime.o gdt.S.o gdt.o idt.o main.o serial.o -o ros.elf",
+    "file": "idt.o"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c main.c -o main.o",
+    "file": "limine.h"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c main.c -o main.o",
+    "file": "main.c"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c serial.c -o serial.o",
+    "file": "limine.h"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c serial.c -o serial.o",
+    "file": "serial.c"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c gdt.c -o gdt.o",
+    "file": "limine.h"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c gdt.c -o gdt.o",
+    "file": "gdt.c"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-as -Wall -c gdt.S -o gdt.S.o",
+    "file": "gdt.S"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c idt.c -o idt.o",
+    "file": "limine.h"
+},
+{
+    "directory": "/home/robin/dev/c/ros/src",
+    "command": "x86_64-elf-gcc -g -ffreestanding -ffunction-sections -fdata-sections -mno-red-zone -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mcmodel=kernel -fno-stack-protector -fno-omit-frame-pointer -fno-lto -fno-PIC -Wall -Wextra -std=gnu11 -m64 -march=x86-64 -I src -isystem freestnd-c-hdrs-0bsd -c idt.c -o idt.o",
+    "file": "idt.c"
+}
+]

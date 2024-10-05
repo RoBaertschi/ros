@@ -1,0 +1,6 @@
+Bochs internal debugger, type 'help' for help or 'c' to continue
+Switching to CPU0
+Next at t=0
+(0) [0x0000fffffff0] f000:fff0 (unk. ctxt): jmpf 0xf000:e05b          ; ea5be000f0
+bx_dbg_read_linear: physical memory read error (phy=0x000100000000, lin=0x0000000100000000)
+c
